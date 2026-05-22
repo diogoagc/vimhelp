@@ -1,0 +1,650 @@
+[
+  {
+    "key": "i",
+    "description": "enter insert mode before cursor",
+    "topic": "modes",
+    "example": "normal mode"
+  },
+  {
+    "key": "a",
+    "description": "enter insert mode after cursor",
+    "topic": "modes",
+    "example": "normal mode"
+  },
+  {
+    "key": "I",
+    "description": "insert at beginning of line",
+    "topic": "modes",
+    "example": "normal mode"
+  },
+  {
+    "key": "A",
+    "description": "insert at end of line",
+    "topic": "modes",
+    "example": "normal mode"
+  },
+  {
+    "key": "o",
+    "description": "open new line below and enter insert mode",
+    "topic": "modes",
+    "example": "normal mode"
+  },
+  {
+    "key": "O",
+    "description": "open new line above and enter insert mode",
+    "topic": "modes",
+    "example": "normal mode"
+  },
+  {
+    "key": "Esc",
+    "description": "return to normal mode",
+    "topic": "modes",
+    "example": "insert mode"
+  },
+  {
+    "key": "v",
+    "description": "enter visual mode",
+    "topic": "modes",
+    "example": "normal mode"
+  },
+  {
+    "key": "V",
+    "description": "enter visual line mode",
+    "topic": "modes",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+v",
+    "description": "enter visual block mode",
+    "topic": "modes",
+    "example": "normal mode"
+  },
+  {
+    "key": "h",
+    "description": "move left",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "j",
+    "description": "move down",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "k",
+    "description": "move up",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "l",
+    "description": "move right",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "w",
+    "description": "move to next word",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "W",
+    "description": "move to next WORD separated by whitespace",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "b",
+    "description": "move to previous word",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "B",
+    "description": "move to previous WORD separated by whitespace",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "e",
+    "description": "move to end of word",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "E",
+    "description": "move to end of WORD separated by whitespace",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "0",
+    "description": "move to beginning of line",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "^",
+    "description": "move to first non-blank character of line",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "$",
+    "description": "move to end of line",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "gg",
+    "description": "move to top of file",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "G",
+    "description": "move to bottom of file",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "{",
+    "description": "move to previous paragraph/block",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "}",
+    "description": "move to next paragraph/block",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "%",
+    "description": "jump to matching bracket, parenthesis, or brace",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+d",
+    "description": "move half page down",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+u",
+    "description": "move half page up",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+f",
+    "description": "move full page down",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+b",
+    "description": "move full page up",
+    "topic": "movement",
+    "example": "normal mode"
+  },
+  {
+    "key": "x",
+    "description": "delete character under cursor",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "X",
+    "description": "delete character before cursor",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "dd",
+    "description": "delete current line",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "D",
+    "description": "delete from cursor to end of line",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "dw",
+    "description": "delete word",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "db",
+    "description": "delete backward to previous word",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "d$",
+    "description": "delete from cursor to end of line",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "d0",
+    "description": "delete from cursor to beginning of line",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "cw",
+    "description": "change word",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "cc",
+    "description": "change entire line",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "C",
+    "description": "change from cursor to end of line",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "s",
+    "description": "substitute character and enter insert mode",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "S",
+    "description": "substitute entire line and enter insert mode",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "r",
+    "description": "replace one character",
+    "topic": "editing",
+    "example": "rX"
+  },
+  {
+    "key": "R",
+    "description": "enter replace mode",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "u",
+    "description": "undo last change",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+r",
+    "description": "redo last undone change",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": ".",
+    "description": "repeat last change",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "J",
+    "description": "join current line with next line",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": ">>",
+    "description": "indent current line",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "<<",
+    "description": "unindent current line",
+    "topic": "editing",
+    "example": "normal mode"
+  },
+  {
+    "key": "yy",
+    "description": "copy current line",
+    "topic": "copy-paste",
+    "example": "normal mode"
+  },
+  {
+    "key": "yw",
+    "description": "copy word",
+    "topic": "copy-paste",
+    "example": "normal mode"
+  },
+  {
+    "key": "y$",
+    "description": "copy from cursor to end of line",
+    "topic": "copy-paste",
+    "example": "normal mode"
+  },
+  {
+    "key": "p",
+    "description": "paste after cursor or below line",
+    "topic": "copy-paste",
+    "example": "normal mode"
+  },
+  {
+    "key": "P",
+    "description": "paste before cursor or above line",
+    "topic": "copy-paste",
+    "example": "normal mode"
+  },
+  {
+    "key": "\"+y",
+    "description": "copy selection to system clipboard",
+    "topic": "copy-paste",
+    "example": "visual mode"
+  },
+  {
+    "key": "\"+p",
+    "description": "paste from system clipboard",
+    "topic": "copy-paste",
+    "example": "normal mode"
+  },
+  {
+    "key": "ci\"",
+    "description": "change inside double quotes",
+    "topic": "text-objects",
+    "example": "normal mode"
+  },
+  {
+    "key": "ca\"",
+    "description": "change around double quotes including quotes",
+    "topic": "text-objects",
+    "example": "normal mode"
+  },
+  {
+    "key": "ci'",
+    "description": "change inside single quotes",
+    "topic": "text-objects",
+    "example": "normal mode"
+  },
+  {
+    "key": "ci(",
+    "description": "change inside parentheses",
+    "topic": "text-objects",
+    "example": "normal mode"
+  },
+  {
+    "key": "ca(",
+    "description": "change around parentheses including parentheses",
+    "topic": "text-objects",
+    "example": "normal mode"
+  },
+  {
+    "key": "ci{",
+    "description": "change inside braces",
+    "topic": "text-objects",
+    "example": "normal mode"
+  },
+  {
+    "key": "ci[",
+    "description": "change inside brackets",
+    "topic": "text-objects",
+    "example": "normal mode"
+  },
+  {
+    "key": "di\"",
+    "description": "delete inside double quotes",
+    "topic": "text-objects",
+    "example": "normal mode"
+  },
+  {
+    "key": "di(",
+    "description": "delete inside parentheses",
+    "topic": "text-objects",
+    "example": "normal mode"
+  },
+  {
+    "key": "yi\"",
+    "description": "copy inside double quotes",
+    "topic": "text-objects",
+    "example": "normal mode"
+  },
+  {
+    "key": "yi(",
+    "description": "copy inside parentheses",
+    "topic": "text-objects",
+    "example": "normal mode"
+  },
+  {
+    "key": "vat",
+    "description": "select around HTML/XML tag",
+    "topic": "text-objects",
+    "example": "visual mode"
+  },
+  {
+    "key": "vit",
+    "description": "select inside HTML/XML tag",
+    "topic": "text-objects",
+    "example": "visual mode"
+  },
+  {
+    "key": "/",
+    "description": "search forward",
+    "topic": "search",
+    "example": "/word"
+  },
+  {
+    "key": "?",
+    "description": "search backward",
+    "topic": "search",
+    "example": "?word"
+  },
+  {
+    "key": "n",
+    "description": "go to next search result",
+    "topic": "search",
+    "example": "after search"
+  },
+  {
+    "key": "N",
+    "description": "go to previous search result",
+    "topic": "search",
+    "example": "after search"
+  },
+  {
+    "key": "*",
+    "description": "search forward for word under cursor",
+    "topic": "search",
+    "example": "normal mode"
+  },
+  {
+    "key": "#",
+    "description": "search backward for word under cursor",
+    "topic": "search",
+    "example": "normal mode"
+  },
+  {
+    "key": ":noh",
+    "description": "clear search highlighting",
+    "topic": "search",
+    "example": "command mode"
+  },
+  {
+    "key": ":%s/old/new/g",
+    "description": "replace all old with new in file",
+    "topic": "replace",
+    "example": "command mode"
+  },
+  {
+    "key": ":s/old/new/g",
+    "description": "replace old with new on current line",
+    "topic": "replace",
+    "example": "command mode"
+  },
+  {
+    "key": ":%s/old/new/gc",
+    "description": "replace all with confirmation",
+    "topic": "replace",
+    "example": "command mode"
+  },
+  {
+    "key": ":w",
+    "description": "save file",
+    "topic": "files",
+    "example": "command mode"
+  },
+  {
+    "key": ":q",
+    "description": "quit",
+    "topic": "files",
+    "example": "command mode"
+  },
+  {
+    "key": ":wq",
+    "description": "save and quit",
+    "topic": "files",
+    "example": "command mode"
+  },
+  {
+    "key": ":q!",
+    "description": "quit without saving",
+    "topic": "files",
+    "example": "command mode"
+  },
+  {
+    "key": ":e filename",
+    "description": "open file",
+    "topic": "files",
+    "example": "command mode"
+  },
+  {
+    "key": ":w filename",
+    "description": "save as filename",
+    "topic": "files",
+    "example": "command mode"
+  },
+  {
+    "key": "v",
+    "description": "start character selection",
+    "topic": "visual",
+    "example": "normal mode"
+  },
+  {
+    "key": "V",
+    "description": "start line selection",
+    "topic": "visual",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+v",
+    "description": "start block selection",
+    "topic": "visual",
+    "example": "normal mode"
+  },
+  {
+    "key": "y",
+    "description": "copy selected text",
+    "topic": "visual",
+    "example": "visual mode"
+  },
+  {
+    "key": "d",
+    "description": "delete selected text",
+    "topic": "visual",
+    "example": "visual mode"
+  },
+  {
+    "key": ">",
+    "description": "indent selected text",
+    "topic": "visual",
+    "example": "visual mode"
+  },
+  {
+    "key": "<",
+    "description": "unindent selected text",
+    "topic": "visual",
+    "example": "visual mode"
+  },
+  {
+    "key": "Ctrl+w s",
+    "description": "split window horizontally",
+    "topic": "windows",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+w v",
+    "description": "split window vertically",
+    "topic": "windows",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+w h",
+    "description": "move to left window",
+    "topic": "windows",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+w j",
+    "description": "move to lower window",
+    "topic": "windows",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+w k",
+    "description": "move to upper window",
+    "topic": "windows",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+w l",
+    "description": "move to right window",
+    "topic": "windows",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+w q",
+    "description": "close current window",
+    "topic": "windows",
+    "example": "normal mode"
+  },
+  {
+    "key": "ma",
+    "description": "set mark named a",
+    "topic": "marks-jumps",
+    "example": "normal mode"
+  },
+  {
+    "key": "`a",
+    "description": "jump to exact position of mark a",
+    "topic": "marks-jumps",
+    "example": "normal mode"
+  },
+  {
+    "key": "'a",
+    "description": "jump to line of mark a",
+    "topic": "marks-jumps",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+o",
+    "description": "jump back to previous location",
+    "topic": "marks-jumps",
+    "example": "normal mode"
+  },
+  {
+    "key": "Ctrl+i",
+    "description": "jump forward to next location",
+    "topic": "marks-jumps",
+    "example": "normal mode"
+  }
+]
