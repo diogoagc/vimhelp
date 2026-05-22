@@ -88,7 +88,7 @@ go install github.com/diogoagc/vimhelp@latest
 Install a specific version:
 
 ```bash
-go install github.com/diogoagc/vimhelp@v0.1.1
+go install github.com/diogoagc/vimhelp@v1.0.0
 ```
 
 ## License
