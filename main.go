@@ -5,11 +5,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
 //go:embed bindings.json
-var bindingsFile []byte
+var defaultBindingsFile []byte
 
 type Binding struct {
 	Key         string `json:"key"`
@@ -19,8 +20,26 @@ type Binding struct {
 }
 
 func main() {
-	bindings, err := loadBindings()
+	if len(os.Args) > 1 {
+		query := strings.ToLower(os.Args[1])
 
+		if query == "--help" || query == "-h" {
+			printHelp()
+			return
+		}
+
+		if query == "init" {
+			initUserBindings()
+			return
+		}
+
+		if query == "config" || query == "--config" {
+			printConfigPath()
+			return
+		}
+	}
+
+	bindings, err := loadBindings()
 	if err != nil {
 		fmt.Println("Error loading bindings:", err)
 		return
@@ -32,11 +51,6 @@ func main() {
 	}
 
 	query := strings.ToLower(os.Args[1])
-
-	if query == "--help" || query == "-h" {
-		printHelp()
-		return
-	}
 
 	if query == "topics" || query == "--topics" {
 		printTopics(bindings)
@@ -55,14 +69,74 @@ func main() {
 }
 
 func loadBindings() ([]Binding, error) {
+	content := defaultBindingsFile
+
+	userBindingsPath, err := getUserBindingsPath()
+	if err == nil {
+		userContent, readErr := os.ReadFile(userBindingsPath)
+		if readErr == nil {
+			content = userContent
+		}
+	}
+
 	var bindings []Binding
 
-	err := json.Unmarshal(bindingsFile, &bindings)
+	err = json.Unmarshal(content, &bindings)
 	if err != nil {
 		return nil, err
 	}
 
 	return bindings, nil
+}
+
+func getUserBindingsPath() (string, error) {
+	configDir, err := os.UserConfigDir()
+	if err != nil {
+		return "", err
+	}
+
+	return filepath.Join(configDir, "vimhelp", "bindings.json"), nil
+}
+
+func initUserBindings() {
+	userBindingsPath, err := getUserBindingsPath()
+	if err != nil {
+		fmt.Println("Error finding config directory:", err)
+		return
+	}
+
+	if _, err := os.Stat(userBindingsPath); err == nil {
+		fmt.Println("User bindings already exist:")
+		fmt.Println(userBindingsPath)
+		return
+	}
+
+	err = os.MkdirAll(filepath.Dir(userBindingsPath), 0755)
+	if err != nil {
+		fmt.Println("Error creating config directory:", err)
+		return
+	}
+
+	err = os.WriteFile(userBindingsPath, defaultBindingsFile, 0644)
+	if err != nil {
+		fmt.Println("Error creating user bindings file:", err)
+		return
+	}
+
+	fmt.Println("User bindings created:")
+	fmt.Println(userBindingsPath)
+	fmt.Println()
+	fmt.Println("You can now edit this file to customize your Vim cheat sheet.")
+}
+
+func printConfigPath() {
+	userBindingsPath, err := getUserBindingsPath()
+	if err != nil {
+		fmt.Println("Error finding config directory:", err)
+		return
+	}
+
+	fmt.Println(userBindingsPath)
 }
 
 func printAll(bindings []Binding) {
@@ -120,7 +194,8 @@ func printHelp() {
 	fmt.Println("  vimhelp <topic>      Show bindings for a topic")
 	fmt.Println("  vimhelp <key>        Show help for a specific key")
 	fmt.Println("  vimhelp topics       List available topics")
-	fmt.Println("  vimhelp --topics     List available topics")
+	fmt.Println("  vimhelp init         Create editable user bindings file")
+	fmt.Println("  vimhelp config       Show user bindings file path")
 	fmt.Println("  vimhelp --help       Show this help message")
 	fmt.Println()
 	fmt.Println("Examples:")
